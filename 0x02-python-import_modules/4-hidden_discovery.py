@@ -6,5 +6,5 @@ if __name__ == "__main__":
     hiddenList.sort()
     
     for i in range(len(hiddenList) - 1):
-        if (hiddenList[i][0] != '_'):
+        if (hiddenList[i][0] != '__'):
             print(hiddenList[i])
