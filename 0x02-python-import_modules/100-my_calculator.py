@@ -4,7 +4,7 @@ if (__name__ == "__main__"):
     import sys
     arg = sys.argv
     _len = len(arg)
-    operators = "+-*/"
+    operators = ["+", "-", "*", "/"]
 
     if (_len != 4):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
@@ -14,16 +14,18 @@ if (__name__ == "__main__"):
         print("Unknown operator. Available operators: +, -, * and /")
         print(1)
         exit(1)
-   else:
-       op = arg[2]
-       a = int(arg[1])
-       b = int(arg[3])
+    else:
+        op = arg[2]
+        a = int(arg[1])
+        b = int(arg[3])
 
-       if (op == "+"):
-           print("{} {} {} = {}".format(a, op, b, add(a, b)))
-       elif (op == "-"):    
-           print("{} {} {} = {}".format(a, op, b, sub(a, b)))
-       elif (op == "*"):    
-           print("{} {} {} = {}".format(a, op, b, mul(a, b)))
-       else:    
-           print("{} {} {} = {}".format(a, op, b, div(a, b)))
+        if (op == "+"):
+            print("{} {} {} = {}".format(a, op, b, add(a, b)))
+        elif (op == "-"):
+            print("{} {} {} = {}".format(a, op, b, sub(a, b)))
+        elif (op == "*"):
+            print("{} {} {} = {}".format(a, op, b, mul(a, b)))
+        else:
+            print("{} {} {} = {}".format(a, op, b, div(a, b)))
+        print(0)
+        exit(0)
