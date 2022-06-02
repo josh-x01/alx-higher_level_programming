@@ -8,12 +8,10 @@ if (__name__ == "__main__"):
 
     if (_len != 4):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        print(1)
-        exit(1)
+        sys.exit(1)
     elif (arg[2] not in operators):
         print("Unknown operator. Available operators: +, -, * and /")
-        print(1)
-        exit(1)
+        sys.exit(1)
     else:
         op = arg[2]
         a = int(arg[1])
@@ -27,5 +25,4 @@ if (__name__ == "__main__"):
             print("{} {} {} = {}".format(a, op, b, mul(a, b)))
         else:
             print("{} {} {} = {}".format(a, op, b, div(a, b)))
-        print(0)
-        exit(0)
+            sys.exit(1)
