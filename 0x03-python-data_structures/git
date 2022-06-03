@@ -1,0 +1,4 @@
+chmod u+x *
+git add .
+git commit -m "data structure"
+git push
