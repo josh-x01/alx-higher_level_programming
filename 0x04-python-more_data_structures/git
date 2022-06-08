@@ -1,4 +1,4 @@
-git update-index --chmod=+x *
+sudo chmod u+x *
 git add .
 git commit -m "More on Datastructure"
 git push
