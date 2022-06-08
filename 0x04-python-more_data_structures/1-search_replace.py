@@ -4,4 +4,4 @@ def search_replace(my_list, search, replace):
     for i in copy_list:
         if i == search:
             i = replace
-            return copy_list
+    return copy_list
