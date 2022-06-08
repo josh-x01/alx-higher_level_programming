@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-multiply_by_2 = __import__('9-multiply_by_2').multiply_by_2
-print_sorted_dictionary = \
-    __import__('6-print_sorted_dictionary').print_sorted_dictionary
+multiply_list_map = __import__('11-multiply_list_map').multiply_list_map
 
-a_dictionary = {'John': 12, 'Alex': 8, 'Bob': 14, 'Mike': 14, 'Molly': 16}
-new_dict = multiply_by_2(a_dictionary)
-print_sorted_dictionary(a_dictionary)
-print("--")
-print_sorted_dictionary(new_dict)
+my_list = [1, 2, 3, 4, 6]
+new_list = multiply_list_map(my_list, 4)
+print(new_list)
+print(my_list)
+
