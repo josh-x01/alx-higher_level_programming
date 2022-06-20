@@ -1,0 +1,4 @@
+sudo chmod u+x *
+git add .
+git commit -m "error handling"
+git push
