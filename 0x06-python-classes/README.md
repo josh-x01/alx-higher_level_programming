@@ -1,1 +1,1 @@
-#Python Clases first project
+Learning class with python
