@@ -22,7 +22,7 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.width = width
         self.heigth = height
-    
+
     def __str__(self):
         """Returns a formatted string"""
 
