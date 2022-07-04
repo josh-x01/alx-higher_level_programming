@@ -11,4 +11,4 @@ def lookup(obj):
         - obj: the object where the attributes and method found
     """
 
-    return getattr(obj)
+    return dir(obj)
