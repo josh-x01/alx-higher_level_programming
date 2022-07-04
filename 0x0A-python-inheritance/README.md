@@ -1,1 +1,1 @@
-<h1>Python-inheritance</h1>
+<h1>Python-inheritance </h1>
