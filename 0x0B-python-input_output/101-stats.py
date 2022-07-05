@@ -13,12 +13,15 @@ if __name__ == "__main__":
 
     def check_match(line):
         '''Checks for regexp match in line.'''
-        line = line[:-1]
-        words = line.split(" ")
-        size[0] += int(words[-1])
-        code = int(words[-2])
-        if code in codes:
-            codes[code] += 1
+        try:
+            line = line[:-1]
+            words = line.split(" ")
+            size[0] += int(words[-1])
+            code = int(words[-2])
+            if code in codes:
+                codes[code] += 1
+        except:
+            pass
 
     def print_stats():
         '''Prints accumulated statistics.'''
