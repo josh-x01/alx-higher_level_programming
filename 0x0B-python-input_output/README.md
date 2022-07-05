@@ -1,1 +1,1 @@
-input output
+input and output
