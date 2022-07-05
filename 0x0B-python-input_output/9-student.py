@@ -9,7 +9,7 @@ class Student:
         - lastname
         - age
     """
-    def __init__(self, firstname, lastname, age):
+    def __init__(self, first_name, last_name, age):
         """Initializes the class with the given arguments"""
 
         self.first_name = firstname
