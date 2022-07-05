@@ -23,7 +23,7 @@ def pascal_triangle(n):
     for i in range(1, n):
         _list[i][0] = 1
         for j in range(1, i + 1):
-            if j < len(l[i - 1]):
+            if j < len(_list[i - 1]):
                 _list[i][j] = _list[i - 1][j - 1] + _list[i - 1][j]
             else:
                 _list[i][j] = _list[i - 1][0]
