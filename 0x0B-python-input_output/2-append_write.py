@@ -14,7 +14,6 @@ def append_write(filename="", text=""):
     """
 
     with open(filename, 'a', encoding="utf-8") as f:
-        size_char = f.append(text)
+        size_char = f.write(text)
 
-    f.closed
     return size_char
