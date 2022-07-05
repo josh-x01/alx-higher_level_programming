@@ -12,8 +12,8 @@ class Student:
     def __init__(self, firstname, lastname, age):
         """Initializes the class with the given arguments"""
 
-        self.firstname = firstname
-        self.lastname = lastname
+        self.first_name = firstname
+        self.last_name = lastname
         self.age = age
 
     def to_json(self):
