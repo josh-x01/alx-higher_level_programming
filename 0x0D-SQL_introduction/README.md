@@ -1,1 +1,1 @@
-this is sql intro
+sql introduction
