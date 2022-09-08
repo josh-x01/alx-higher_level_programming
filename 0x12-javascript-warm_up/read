@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo chmod u+x *
+git add .
+echo "commit message"
+
+while IFS='$\n' read -r line; do
+	git commit -m $line
+	git push
+done
