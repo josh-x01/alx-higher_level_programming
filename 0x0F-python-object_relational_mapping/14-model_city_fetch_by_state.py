@@ -1,24 +1,27 @@
 #!/usr/bin/python3
-"""prints all City objects
-from the database hbtn_0e_14_usa"""
+"""
+print cities with their corresponding states
+"""
 
 if __name__ == "__main__":
-
     import sys
-    from model_state import Base, State
     from model_city import City
-    from sqlalchemy import create_engine
-    from sqlalchemy.orm import Session
-    from sqlalchemy.schema import Table
+    from model_state import Base, State
+    from sqlalchemy import (create_engine)
+    from sqlalchemy.orm import sessionmaker
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(sys.argv[1], sys.argv[2],
-                                   sys.argv[3]), pool_pre_ping=True)
+    user = sys.argv[1]
+    pwd = sys.argv[2]
+    db_name = sys.argv[3]
+
+    eng_txt = 'mysql+mysqldb://{}:{}@localhost/{}'.format(user, pwd, db_name)
+    engine = create_engine(eng_txt, pool_pre_ping=True)
     Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-    session = Session(engine)
-    for state, city in session.query(State, City)\
-                              .filter(City.state_id == State.id)\
-                              .order_by(City.id).all():
-            print("{}: ({}) {}".format(state.name, city.id, city.name))
-    session.close()
+    ct = session.query(City, State).filter(City.state_id == State.id).\
+        order_by(City.id).all()
+    for city, state in ct:
+        print('{}: ({}) {}'.format(state.name, city.id, city.name))
+    session.commit()
