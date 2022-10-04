@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-'''Module 6-peak
-Contains function find_peak
-'''
+""" contains function that finds a peak in a list
+    of unsorted integers.
+"""
 
 
 def find_peak(list_of_integers):
-    '''Finds the biggest number in list_of_integers
-    and returns it. If the list is empty, None is returned.
-    '''
+    """Function finds peak of list passed in"""
+    if type(list_of_integers) != list:
+        return
     if len(list_of_integers) == 0:
         return None
-    return sorted(list_of_integers)[-1]
+    list_of_integers.sort(reverse=True)
+    return list_of_integers[0]
