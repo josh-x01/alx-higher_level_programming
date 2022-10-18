@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-require('request')('https://swapi-api.hbtn.io/api/films', (e, r, b) => {
+require('request')(process.argv[2], (e, r, b) => {
   if (e) console.log(e);
   else {
     const nb = JSON.parse(b).results.filter((elem) => {
