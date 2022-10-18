@@ -1,7 +1,0 @@
-#!/usr/bin/node
-
-const request = require('request')
-
-request('www.google.com', (e, r) => {
-  console.log(r)
-})
