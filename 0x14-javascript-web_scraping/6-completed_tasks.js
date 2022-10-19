@@ -2,12 +2,11 @@
 
 require('request')(process.argv[2], (e, r, b) => {
   if (e) console.log(e);
-  else {
-    const CompletedTasks = {};
-    for (let i = 1; i <= 10; i++) {
-      CompletedTasks[i] = JSON.parse(b).filter(task => task.completed === true)
-        .filter(task => task.userId === i).length;
-    }
-    console.log(CompletedTasks);
+  const CompletedTasks = {};
+  for (let i = 1; i <= 10; i++) {
+    const n = JSON.parse(b).filter(task => task.completed === true)
+      .filter(task => task.userId === i).length;
+    if (n) CompletedTasks[i] = n;
   }
+  console.log(CompletedTasks);
 });
